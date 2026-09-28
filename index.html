@@ -1,0 +1,209 @@
+<title>Sur Hotel</title>
+<meta name="description" content="A budget-friendly hotel in the heart of Sur, Oman — minutes from the souk, the beach and the dhow-building harbour.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-row">
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
+      <a href="#explore" data-i18n="nav.explore">Explore Sur</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <a href="#home" class="brand serif"><img class="brand-logo" src="images/logo.png" alt="Sur Hotel logo">Sur Hotel</a>
+    <div class="header-actions">
+      <div class="lang-switch">
+        <button class="lang-btn" type="button" aria-haspopup="true">
+          <span class="lang-current">English</span>
+          <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.4"/></svg>
+        </button>
+        <div class="lang-menu"></div>
+      </div>
+      <a class="btn btn-dark nav-reserve-btn" data-booking-link href="#" target="_blank" rel="noopener" data-i18n="nav.reserve">Reserve Now</a>
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile nav panel -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <span class="brand serif">Sur Hotel</span>
+    <button id="mobileNavClose" aria-label="Close menu" style="background:none;border:none;font-size:26px;color:var(--ink);">&times;</button>
+  </div>
+  <a href="#home" data-i18n="nav.home">Home</a>
+  <a href="#about" data-i18n="nav.about">About</a>
+  <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
+  <a href="#explore" data-i18n="nav.explore">Explore Sur</a>
+  <a href="#contact" data-i18n="nav.contact">Contact</a>
+  <a class="btn btn-dark" data-booking-link href="#" target="_blank" rel="noopener" data-i18n="nav.reserve">Reserve Now</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-media">
+    <img src="images/hero.jpg" data-alt="hero" alt="Al Ayjah lighthouse across the inlet from Sur, Oman">
+  </div>
+  <div class="hero-inner">
+    <div class="hero-flourish"><span class="divider"></span><span data-i18n="hero.year">2026</span><span class="divider"></span></div>
+    <h1 class="hero-title serif"><span class="script">S</span>ur Hotel</h1>
+    <p class="hero-tagline" data-i18n="hero.tagline">A budget-friendly base in the heart of Sur.</p>
+    <a class="btn btn-light" href="#rooms"><span data-i18n="hero.cta">See the Rooms</span></a>
+  </div>
+  <div class="hero-corner start" data-i18n="hero.year">2026</div>
+  <div class="hero-corner end serif" data-i18n="hero.location">Sur · Oman</div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="eyebrow" data-i18n="about.eyebrow">About the hotel</div>
+    <div style="height:16px"></div>
+    <h2 class="big-statement serif" data-dropcap="about.statement">We're a simple, well-placed hotel...</h2>
+
+    <div class="about-grid">
+      <div class="about-copy">
+        <p data-i18n="about.p1">Every room is air-conditioned...</p>
+        <a class="cta-link" href="#rooms"><span data-i18n="about.cta">See the rooms</span></a>
+      </div>
+      <div class="about-copy">
+        <p data-i18n="about.p2">Sur Beach is a six-minute walk away...</p>
+      </div>
+    </div>
+
+    <div class="about-strip">
+      <img class="reveal" src="images/exterior.jpg" data-alt="exterior" alt="">
+      <img class="reveal" src="images/about-dhow.jpg" data-alt="dhow" alt="">
+      <img class="reveal" src="images/city.jpg" data-alt="city" alt="">
+      <img class="reveal" src="images/creek.jpg" data-alt="creek" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROOMS ============ -->
+<section class="section rooms-section" id="rooms">
+  <div class="container">
+    <div class="eyebrow" data-i18n="rooms.eyebrow">Where you'll stay</div>
+    <div style="height:16px"></div>
+    <h2 class="big-statement serif" data-dropcap="rooms.heading">Simple, Comfortable Rooms</h2>
+    <p class="hero-tagline" style="color:var(--ink-soft);text-align:start;margin:14px 0 0;max-width:640px;" data-i18n="rooms.intro">Four room types...</p>
+
+    <div class="room-cards" id="roomCards"></div>
+    <div class="rooms-cta">
+      <a class="btn btn-dark" data-booking-link href="#" target="_blank" rel="noopener" data-i18n="rooms.cta">Check Availability</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPLORE SUR ============ -->
+<section class="section" id="explore">
+  <div class="container">
+    <div class="eyebrow" data-i18n="explore.eyebrow">Beyond the hotel</div>
+    <div style="height:16px"></div>
+    <h2 class="big-statement serif" data-dropcap="explore.heading" style="margin-bottom:10px;">Explore Sur</h2>
+    <p class="hero-tagline" style="color:var(--ink-soft);text-align:start;margin:0 0 10px;max-width:680px;" data-i18n="explore.intro">Sur has been Oman's dhow-building capital...</p>
+    <div class="tag-row" id="tagRow"></div>
+
+    <div class="feature-layout">
+      <div class="feature-side">
+        <figure>
+          <img src="images/bimmah.jpg" data-alt="bimmah" alt="">
+          <figcaption data-caption="bimmah"></figcaption>
+        </figure>
+        <figure>
+          <img src="images/turtles.jpg" data-alt="turtles" alt="">
+          <figcaption data-caption="turtles"></figcaption>
+        </figure>
+      </div>
+      <div class="feature-main">
+        <img src="images/wadi-shab.jpg" data-alt="wadiShab" alt="">
+        <div class="feature-badge">
+          <div class="fb-title serif" id="badgeTitle">Wadi Shab</div>
+          <div class="fb-meta" id="badgeMeta">About 45 minutes by car</div>
+          <a class="btn btn-dark" id="badgeCta" href="https://www.google.com/maps/search/Wadi+Shab+Oman" target="_blank" rel="noopener">View on Map</a>
+        </div>
+      </div>
+      <div class="feature-side">
+        <figure>
+          <img src="images/explore-dhow.jpg" data-alt="dhow" alt="">
+          <figcaption data-caption="dhow"></figcaption>
+        </figure>
+        <figure>
+          <img src="images/lighthouse.jpg" data-alt="lighthouse" alt="">
+          <figcaption data-caption="lighthouse"></figcaption>
+        </figure>
+        <figure>
+          <img src="images/souq.jpg" data-alt="souq" alt="">
+          <figcaption data-caption="souq"></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" style="background:var(--cream-2);">
+  <div class="container">
+    <div class="eyebrow" data-i18n="testimonials.eyebrow">What guests say</div>
+    <div style="height:16px"></div>
+    <h2 class="big-statement serif" data-dropcap="testimonials.heading">Rated Very Good</h2>
+
+    <div class="score-panel">
+      <div>
+        <div class="score-big serif" id="scoreValue">8.0</div>
+        <div class="score-label" id="scoreLabel">Very Good · 581 reviews</div>
+      </div>
+      <div class="score-bars" id="scoreBars"></div>
+    </div>
+
+    <div class="testi-grid" id="testiGrid"></div>
+  </div>
+</section>
+
+<!-- ============ GOOD TO KNOW ============ -->
+<section class="info-strip">
+  <div class="container">
+    <div class="info-grid" id="infoGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CTA FOOTER ============ -->
+<section class="cta-footer" id="contact">
+  <div class="cta-media">
+    <img src="images/hero.jpg" data-alt="hero" alt="">
+  </div>
+  <div class="cta-inner">
+    <h2 class="big-statement serif" data-dropcap="ctaFooter.statement">Ready to explore Sur?</h2>
+    <p data-i18n="ctaFooter.body">Reserve directly through Booking.com...</p>
+    <a class="btn btn-light" data-booking-link href="#" target="_blank" rel="noopener" data-i18n="nav.reserve">Reserve Now</a>
+
+    <div class="cta-brand">
+      <span class="divider"></span>
+      <span class="brand serif"><img class="brand-logo" src="images/logo.png" alt="">Sur Hotel</span>
+      <span class="divider"></span>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <div class="footer-links" id="footerLinks"></div>
+    <div data-i18n="footer.rights">© 2026 Sur Hotel. All rights reserved.</div>
+    <div class="footer-contact">
+      <a href="tel:+96895566809">+968 9556 6809</a>
+      <a href="mailto:booking@surhotel.net">booking@surhotel.net</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/surhoteloman" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.25.07 1.62.07 4.81s-.01 3.56-.07 4.81c-.15 3.23-1.66 4.77-4.92 4.92-1.25.06-1.62.07-4.85.07s-3.6 0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.25-.07-1.62-.07-4.81s.01-3.56.07-4.81c.15-3.23 1.66-4.77 4.92-4.92C8.4 2.2 8.8 2.2 12 2.2zm0 3.5a6.3 6.3 0 100 12.6 6.3 6.3 0 000-12.6zm0 10.4a4.1 4.1 0 110-8.2 4.1 4.1 0 010 8.2zm6.5-10.65a1.47 1.47 0 11-2.94 0 1.47 1.47 0 012.94 0z"/></svg></a>
+      <a href="https://www.facebook.com/surhoteloman" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H16.7V3.7c-.28-.04-1.25-.12-2.37-.12-2.34 0-3.94 1.43-3.94 4.04v2.28H7.7V13h2.69v8h3.11z"/></svg></a>
+      <a href="https://api.whatsapp.com/send?phone=96895566809" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.47 1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.75-.71 2-1.4.25-.68.25-1.27.17-1.4-.07-.12-.27-.2-.57-.35z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.87.51 3.62 1.4 5.12L2 22l5.05-1.35C8.5 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.1c-1.63 0-3.15-.45-4.45-1.23l-.32-.19-3.13.84.84-3.05-.2-.32C3.95 14.95 3.5 13.5 3.5 12 3.5 7.31 7.31 3.5 12 3.5S20.5 7.31 20.5 12 16.69 20.1 12 20.1z"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<script src="translations.js"></script>
+<script src="app.js"></script>
